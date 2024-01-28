@@ -39,7 +39,20 @@ document.addEventListener('click', (event) => {
             // If no specific dialog selector is provided,
             // find the closest dialog element to the clicked element and close it.
             const targetDialog = closeDialogElement.closest('dialog')
-            targetDialog?.close()
+
+            if (!targetDialog) return
+
+            if (targetDialog.hasAttribute('animation')) {
+                targetDialog.setAttribute('close', '')
+                targetDialog.addEventListener('animationend', () => {
+                    if (targetDialog.hasAttribute('close')) {
+                        targetDialog.removeAttribute('close')
+                        targetDialog.close()
+                    }
+                });
+            } else {
+                targetDialog.close()
+            }
         }
         return
     }

@@ -27,7 +27,7 @@ dialog::backdrop {
     background-color: rgba(0 ,0, 0, .77);
 }
 
-@keyframes dialogAnimation {
+@keyframes openDialogAnimation {
     from {
         opacity: 0;
         transform: translateY(10px);
@@ -38,7 +38,16 @@ dialog::backdrop {
     }
 }
 
-@keyframes dialogBackdropAnimation {
+@keyframes closeDialogAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes openDialogBackdropAnimation {
     from {
         opacity: 0;
     }
@@ -47,12 +56,29 @@ dialog::backdrop {
     }
 }
 
-dialog[open]::backdrop {
-    animation: dialogBackdropAnimation .2s ease;
+@keyframes closeDialogBackdropAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 dialog[open] {
-    animation: dialogAnimation .3s ease;
+    animation: openDialogAnimation .3s ease;
+}
+
+dialog[open]::backdrop {
+    animation: openDialogBackdropAnimation .3s ease;
+}
+
+dialog[close] {
+    animation: closeDialogAnimation .3s ease;
+}
+
+dialog[close]::backdrop {
+    animation: closeDialogBackdropAnimation .3s ease;
 }
 
 
