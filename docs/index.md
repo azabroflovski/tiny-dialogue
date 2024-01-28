@@ -4,22 +4,34 @@ layout: home
 
 hero:
   name: "NativeDialog"
-  text: "Tiny wrapper over <dialog />"
-  tagline: My great project tagline
+  text: "Tiny wrapper over the &lt;dialog /&gt;"
+  tagline: No overhead scripts. Just dialog.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get started
+      link: /get-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Demos
+      link: /demos
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
+  - title: 0.1 kb
+    icon: 🪶
+    details: Lightweight baby. Very small size. You won't even know it's installed.
+  - title: It's Native
+    icon: ☀️
+    details: The &lt;dialog /&gt; element represents a modal or non-modal dialog box.
+  - title: Blazing Fast
+    icon: 🚀️
+    details: Faster than non-native JavaScript solutions due to direct browser support.
+  - title: Good browser support
+    icon: 🌐
+    details: No need for comment, see for yourself. <br> Source -> caniuse
+  - title: Use with any framework.
+    icon: 🛠️
+    details: Easy to use via Vue, React, Angular, Svelte and others.
+  - title: Fully Typed APIs
+    icon: 🔑
+    details: Flexible programmatic APIs with full TypeScript typing.
 
+---
