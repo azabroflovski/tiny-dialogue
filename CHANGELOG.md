@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.4
+
+[compare changes](https://github.com-azabroflovski/azabroflovski/nativedialog/compare/v0.0.3...v0.0.4)
+
+### 🏡 Chore
+
+- Add readme file (fb22e99)
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.3
 
 ### 🏡 Chore
