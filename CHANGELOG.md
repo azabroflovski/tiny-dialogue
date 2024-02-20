@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.8
+
+[compare changes](https://github.com/azabroflovski/native-modal/compare/v0.0.7...v0.0.8)
+
+### 🏡 Chore
+
+- Trigger on master branch instead main (github actions) ([d4f5a7f](https://github.com/azabroflovski/native-modal/commit/d4f5a7f))
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.7
 
 [compare changes](https://github.com/azabroflovski/native-modal/compare/v0.0.6...v0.0.7)
