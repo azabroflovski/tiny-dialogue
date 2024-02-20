@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.6
+
+[compare changes](https://github.com/azabroflovski/native-modal/compare/v0.0.5...v0.0.6)
+
+### 🏡 Chore
+
+- Add npm package details in package.json ([5dcb839](https://github.com/azabroflovski/native-modal/commit/5dcb839))
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.5
 
 [compare changes](https://github.com-azabroflovski/azabroflovski/nativedialog/compare/v0.0.4...v0.0.5)
