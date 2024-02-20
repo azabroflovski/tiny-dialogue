@@ -37,7 +37,8 @@
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
-    "vitepress": "^1.0.0-rc.44"
+    "vitepress": "^1.0.0-rc.44",
+    "vue": "^3.4.19"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.6.1"
