@@ -2,7 +2,30 @@
   "name": "native-modal",
   "private": false,
   "version": "0.0.5",
+  "description": "NativeModal - tiny wrapper over the <dialog />. No overhead scripts. Just modal.",
   "type": "module",
+  "author": "azabroflovski",
+  "license": "MIT",
+  "homepage": "https://github.com/azabroflovski/native-modal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azabroflovski/native-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/azabroflovski/native-modal/issues",
+    "email": "hi@azabroflovski.uz"
+  },
+  "keywords": [
+    "modal",
+    "modals",
+    "dialog",
+    "dialogs",
+    "native-modal",
+    "native-dialog",
+    "native",
+    "web",
+    "azabroflovski"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
