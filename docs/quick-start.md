@@ -112,7 +112,14 @@ the dialog box yourself or use ready-made themes, or even write your own theme.
 
 ## Pass props
 You can modify the behavior of the modal window by passing parameters 
-to the dialog box. It's very simple. Let's look at an example:
+to the dialog box. It's very simple. Let's look at an examples:
+
+---
+
+### Disable `esc` closing
+
+By default, an open dialog box can be closed using `esc`.
+We can prevent this by passing the parameter `disable-esc`.
 
 ```html
 <button data-modal-open="dialog">Open modal</button>
@@ -126,9 +133,6 @@ to the dialog box. It's very simple. Let's look at an example:
 </dialog>
 ```
 
-By default, an open dialog box can be closed using `esc`. 
-We can prevent this by passing the parameter `disable-esc`.
-
 ### Result
 
 <div class="result-box">
@@ -141,6 +145,38 @@ After opening, try pressing <code>esc</code> <br><br>
     <button data-modal-close>Good</button>
 </dialog>
 </div>
+
+---
+
+### One time
+You can set a props `once` so that the modal window is triggered **only once.**
+```html
+<button data-modal-open="dialog">Open modal</button>
+
+... 
+
+<dialog once>
+    <h2>Onetime</h2>
+    <p>You'll only see me once, thank attribute <code>once</code>. </p>
+    <button data-modal-close>Thx for once</button>
+</dialog>
+```
+
+### Result
+<div class="result-box">
+<button data-modal-open="#once-modal" style="margin-right: 6px;">Open modal</button> 
+
+<dialog id="once-modal" v-bind="dialogAttrs" once>
+    <h2>One time</h2>
+    <p>You'll only see me once, thank attribute <code>once</code>. </p>
+    <button data-modal-close>Okay</button>
+</dialog>
+</div>
+
+::: info Take note
+Don't forget, this example will work only **once**, you will need to refresh the page to reopen the modal window example.
+:::
+---
 
 ### Another example
 Add delay to opening modal via `show-delay`

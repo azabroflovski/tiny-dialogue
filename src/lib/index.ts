@@ -1,7 +1,24 @@
+import './styles/main.css'
 import './styles/default.css'
 import { getDialogElement } from './helpers'
 
 export function initNativeModal() {
+    window.__NATIVE_MODAL__ = {
+        ACTIVE_MODALS: [],
+        ONETIME_MODALS: new Set()
+    }
+
+    function openDialog(dialog: HTMLDialogElement) {
+        if (dialog.hasAttribute('once')) {
+            if (!dialog.opened) {
+                dialog.showModal()
+                dialog.opened = true
+            }
+        } else {
+            dialog.showModal()
+        }
+    }
+
     document.addEventListener('click', (event) => {
         // The event.target property references the element that was clicked.
         // The 'as Element' part casts the target to an Element type.
@@ -21,12 +38,16 @@ export function initNativeModal() {
             if (targetDialogSelector) {
                 const dialog = getDialogElement(targetDialogSelector)
 
+                if (dialog.hasAttribute('once')) {
+
+                }
+
                 if (dialog.hasAttribute('show-delay')) {
                     setTimeout(() => {
-                        dialog.showModal()
+                        openDialog(dialog)
                     }, +dialog.getAttribute('show-delay')!)
                 } else {
-                    dialog.showModal()
+                    openDialog(dialog)
                 }
 
                 if (dialog.hasAttribute('disable-esc')) {

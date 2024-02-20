@@ -12,6 +12,7 @@
   <button data-modal-open="#dialog">Open modal</button>
   <button data-modal-open="#dialog-dark">Open modal (dark)</button>
   <button id="btn">Programmatic</button>
+  <button data-modal-open="#dialog-onetime">One time</button>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
@@ -51,8 +52,8 @@
     </div>
 
     <div data-dialog-footer>
-      <button data-dialog-close>Yes</button>
-      <button data-dialog-close>Cancel</button>
+      <button data-modal-close>Yes</button>
+      <button data-modal-close>Cancel</button>
     </div>
   </dialog>
 
@@ -70,6 +71,20 @@
       <button data-modal-close>Cancel</button>
     </div>
   </dialog>
+
+    <dialog id="dialog-onetime" blur animation once>
+        <div data-dialog-header>
+            <h2>Onetime</h2>
+        </div>
+
+        <div data-dialog-content>
+            I am a onetime <code>dialog</code>
+        </div>
+
+        <div data-dialog-footer>
+            <button data-modal-close>Good!</button>
+        </div>
+    </dialog>
 </div>
 <script type="module" src="/src/main.ts"></script>
 </body>
