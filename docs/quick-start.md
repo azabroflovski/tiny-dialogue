@@ -248,4 +248,4 @@ your modal window, its appearance is solely your responsibility.
 
 - Explore [demos](/demos) page.
 - See available [props](/api/props) (options)
-- Learn how to [customize](/api/custonize) your modals (themes)
+- Learn how to [customize](/api/customize) your modals (themes)
