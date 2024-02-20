@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.0.3
+
+### 🏡 Chore
+
+- **changelog:** Correct history with npm version (f21145d)
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.2
 
 Correct changelog.
