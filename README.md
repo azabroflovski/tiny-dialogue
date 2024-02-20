@@ -1,21 +1,3 @@
-<script lang="ts" setup>
-import { useData } from 'vitepress'
-import { initNativeModal } from '../src/lib/index.js' 
-import {computed} from ".vitepress/cache/deps/vue.js"; 
-initNativeModal()
-
-const { isDark } = useData()
-const dialogAttrs = computed(() => {
-    if (isDark.value) {
-      return {
-        dark: '',
-      }
-    }
-
-    return {}
-})
-</script>
-
 # Quick start
 
 ## Installation
@@ -53,23 +35,9 @@ initNativeModal() // register attrs handling
     <button data-modal-close>OK</button>
 </dialog>
 ```
-
-### Result
-<div class="result-box">
-<button class="VPButton medium brand" data-modal-open="dialog">Show modal</button>
-
-<dialog v-bind="dialogAttrs">
-    <h2>NativeModal</h2>
-    <p>Hello, click on OK to close modal.</p>
-    <button data-modal-close>OK</button>
-</dialog>
-</div>
-
-
-::: tip Appearance
+> Appearance
 The original modal window doesn't have any styles, so you'll need to style
 the dialog box yourself or use ready-made themes, or even write your own theme.
-:::
 
 ## Multiple modals
 
@@ -91,24 +59,6 @@ the dialog box yourself or use ready-made themes, or even write your own theme.
     <button data-modal-close>OK</button>
 </dialog>
 ```
-
-### Result
-<div class="result-box">
-<button data-modal-open="#first" style="margin-right: 6px;">Open first</button>
-<button data-modal-open="#second">Open second</button>
-
-<dialog id="first" v-bind="dialogAttrs">
-    <h2>First!</h2>
-    <p>Hello, click on OK to close modal.</p>
-    <button data-modal-close>OK</button>
-</dialog>
-
-<dialog id="second" v-bind="dialogAttrs">
-    <h2>I am second</h2>
-    <p>Hello, click on OK to close modal.</p>
-    <button data-modal-close>OK</button>
-</dialog>
-</div>
 
 ## Pass props
 You can modify the behavior of the modal window by passing parameters
@@ -133,19 +83,6 @@ We can prevent this by passing the parameter `disable-esc`.
 </dialog>
 ```
 
-### Result
-
-<div class="result-box">
-After opening, try pressing <code>esc</code> <br><br>
-<button data-modal-open="#on-esc" style="margin-right: 6px;">Open modal</button>
-
-<dialog id="on-esc" v-bind="dialogAttrs" disable-esc>
-    <h2>Hello</h2>
-    <p>Pressing <code>esc</code> has no effect</p>
-    <button data-modal-close>Good</button>
-</dialog>
-</div>
-
 ---
 
 ### One time
@@ -162,20 +99,8 @@ You can set a props `once` so that the modal window is triggered **only once.**
 </dialog>
 ```
 
-### Result
-<div class="result-box">
-<button data-modal-open="#once-modal" style="margin-right: 6px;">Open modal</button> 
-
-<dialog id="once-modal" v-bind="dialogAttrs" once>
-    <h2>One time</h2>
-    <p>You'll only see me once, thank attribute <code>once</code>. </p>
-    <button data-modal-close>Okay</button>
-</dialog>
-</div>
-
-::: info Take note
+> Take note
 Don't forget, this example will work only **once**, you will need to refresh the page to reopen the modal window example.
-:::
 ---
 
 ### Another example
@@ -191,19 +116,6 @@ Add delay to opening modal via `show-delay`
     <button data-modal-close>Cool</button>
 </dialog>
 ```
-
-### Result
-Modal opened after `2000ms`
-
-<div class="result-box">
-<button data-modal-open="#show-delay" style="margin-right: 6px;">Open modal</button>
-
-<dialog id="show-delay" v-bind="dialogAttrs" disable-esc show-delay="2000">
-    <h2>Hello</h2>
-    <p>Also pressing <code>esc</code> has no effect</p>
-    <button data-modal-close>Cool</button>
-</dialog>
-</div>
 
 ## Programmatically
 
