@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.0.7
+
+[compare changes](https://github.com/azabroflovski/native-modal/compare/v0.0.6...v0.0.7)
+
+### 💅 Refactors
+
+- Remove dead links from docs & improve docs ([259ec68](https://github.com/azabroflovski/native-modal/commit/259ec68))
+
+### 🏡 Chore
+
+- Create static.yml (github pages) ([cd4235f](https://github.com/azabroflovski/native-modal/commit/cd4235f))
+- Improve static deployment (github pages) ([ff79ec9](https://github.com/azabroflovski/native-modal/commit/ff79ec9))
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+- Aza Broflovski
+
 ## v0.0.6
 
 [compare changes](https://github.com/azabroflovski/native-modal/compare/v0.0.5...v0.0.6)
