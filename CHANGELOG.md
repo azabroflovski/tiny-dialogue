@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.0.2
+
+Correct changelog.
 
 ## v0.0.1
 
