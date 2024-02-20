@@ -8,7 +8,7 @@
  *
  * Each colors have exact same color scale system with 3 levels of solid
  * colors with different brightness, and 1 soft color.
- * 
+ *
  * - `XXX-1`: The most solid color used mainly for colored text. It must
  *   satisfy the contrast ratio against when used on top of `XXX-soft`.
  *
@@ -136,4 +136,159 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+dialog {
+    font-family: Arial, sans-serif;
+}
+
+dialog:focus {
+    outline: none;
+}
+
+dialog {
+    /* variables */
+    --bg-color: #fff;
+    --color: #1e1e1e;
+
+    color: var(--color);
+    background-color: var(--bg-color);
+    padding: 26px;
+    min-width: 400px;
+    border: none;
+    border-radius: 4px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0 ,0, 0, .77);
+}
+
+@keyframes openDialogAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeDialogAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes openDialogBackdropAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closeDialogBackdropAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+dialog[open] {
+    animation: openDialogAnimation .3s ease;
+}
+
+dialog[open]::backdrop {
+    animation: openDialogBackdropAnimation .3s ease;
+}
+
+dialog[close] {
+    animation: closeDialogAnimation .3s ease;
+}
+
+dialog[close]::backdrop {
+    animation: closeDialogBackdropAnimation .3s ease;
+}
+
+
+dialog[dark] {
+    --bg-color: #1a1a1a;
+    --color: rgba(255, 255, 255, .87);
+}
+
+dialog button {
+    background-color: #f1f1f1;
+    padding: 5px 12px;
+    border: 1px solid rgba(84, 84, 84, .65);
+    border-radius: 8px;
+    font-size: .9em;
+    font-weight: 600;
+    color: inherit;
+    transition: 200ms ease;
+}
+
+dialog[dark] button {
+    background-color: #2f2f2f;
+}
+
+dialog button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+dialog [data-dialog-header] {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+dialog [data-dialog-content] {
+    margin-top: 16px;
+}
+dialog [data-dialog-footer] {
+    margin-top: 16px;
+}
+
+dialog h1,
+dialog h2,
+dialog h3,
+dialog h4,
+dialog h5,
+dialog h6 {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    border: none !important;
+}
+
+.result-box {
+    margin-top: 16px;
+    background-color: var(--vp-c-bg-soft);
+    padding: 22px 24px;
+    border-radius: 8px;
+    box-shadow: var(--vp-shadow-2);
+    margin-bottom: 1.2em;
+    transition: background-color .5s ease;
+}
+
+.result-box button {
+    background-color: var(--vp-c-gray-1);
+    transition: background-color .5s;
+    padding: 5px 12px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 8px;
+    font-size: .9em;
+    font-weight: 600;
+}
+
 

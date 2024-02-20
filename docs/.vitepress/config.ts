@@ -13,10 +13,17 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Getting Started',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Introduction', link: '/introduction' },
+          { text: 'Quick start', link: '/quick-start' },
+        ]
+      },
+      {
+        text: 'API',
+        items: [
+          { text: 'Props', link: '/api/props' },
+          { text: 'Themes', link: '/api/themes' },
         ]
       }
     ],
