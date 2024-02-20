@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.5
+
+[compare changes](https://github.com-azabroflovski/azabroflovski/nativedialog/compare/v0.0.4...v0.0.5)
+
+### 🏡 Chore
+
+- **readme:** Correct readme for npm and github (f73702d)
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com-azabroflovski/azabroflovski/nativedialog/compare/v0.0.3...v0.0.4)
