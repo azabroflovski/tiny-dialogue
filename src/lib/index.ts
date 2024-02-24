@@ -3,9 +3,9 @@ import './styles/default.css'
 import { getDialogElement } from './helpers'
 
 export function initNativeModal() {
-    window.__NATIVE_MODAL__ = {
-        ACTIVE_MODALS: [],
-        ONETIME_MODALS: new Set()
+    // SSR FRIENDLY
+    if (typeof document === 'undefined' || typeof window === 'undefined') {
+        return
     }
 
     function openDialog(dialog: HTMLDialogElement) {

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress'
 import { initNativeModal } from '../src/lib/index.js' 
-import {computed} from ".vitepress/cache/deps/vue.js"; 
+import { computed } from 'vue'
 initNativeModal()
 
 const { isDark } = useData()
