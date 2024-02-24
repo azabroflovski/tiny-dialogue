@@ -33,6 +33,7 @@ export default defineConfig({
     ]
   },
   vite: {
+    base: '/native-modal',
     build: {
       rollupOptions: {
         external: ["vue/server-renderer", "vue"]
