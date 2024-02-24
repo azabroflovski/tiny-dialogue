@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/native-modal',
   title: "NativeModal",
   description: "Tiny wrapper over <dialog />",
   themeConfig: {
@@ -33,7 +34,6 @@ export default defineConfig({
     ]
   },
   vite: {
-    base: '/native-modal',
     build: {
       rollupOptions: {
         external: ["vue/server-renderer", "vue"]
