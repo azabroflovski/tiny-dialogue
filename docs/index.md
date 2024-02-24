@@ -14,7 +14,7 @@ hero:
       text: Demos
       link: /demos
   image:
-    src: /logo.png
+    src: ./logo.png
     alt: NativeModal
 
 features:
