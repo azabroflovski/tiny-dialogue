@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: Demos
       link: /demos
+  image:
+    src: /logo.png
+    alt: NativeModal
 
 features:
   - title: 0.1 kb
