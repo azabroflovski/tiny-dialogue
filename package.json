@@ -1,7 +1,7 @@
 {
   "name": "native-modal",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "NativeModal - tiny wrapper over the <dialog />. No overhead scripts. Just modal.",
   "type": "module",
   "author": "azabroflovski",
