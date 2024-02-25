@@ -32,12 +32,5 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/azabroflovski/native-modal' }
     ]
-  },
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ["vue/server-renderer", "vue"]
-      }
-    }
   }
 })

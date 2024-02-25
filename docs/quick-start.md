@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import { initNativeModal } from '../src/lib/index.js' 
-import { computed } from 'vue'
-initNativeModal()
+import { useData } from 'vitepress';
+import { computed } from 'vue';
+import { initNativeModal } from '../src/lib';
 
-const { isDark } = useData()
+initNativeModal();
+
+const { isDark } = useData();
 const dialogAttrs = computed(() => {
     if (isDark.value) {
       return {
