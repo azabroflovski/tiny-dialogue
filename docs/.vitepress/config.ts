@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/native-modal',
+  base: '/native-modal/',
   title: "NativeModal",
   description: "Tiny wrapper over <dialog />",
   themeConfig: {
