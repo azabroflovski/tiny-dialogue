@@ -19,6 +19,10 @@ const dialogAttrs = computed(() => {
 
 # Quick start
 
+::: warning NOTE
+The package is under **active development**, in this regard, there may be significant api changes.
+:::
+
 ## Installation
 
 Package is available on npm and can be installed from the command line.
