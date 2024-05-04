@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.0.10
+
+[compare changes](https://github.com/azabroflovski/tiny-dialogue/compare/v0.0.9...v0.0.10)
+
+### 🚀 Enhancements
+
+- Add eslint ([b428823](https://github.com/azabroflovski/tiny-dialogue/commit/b428823))
+- Rebrand native-modal => tiny-dialogue ([8d47f99](https://github.com/azabroflovski/tiny-dialogue/commit/8d47f99))
+
+### 🏡 Chore
+
+- **npm:** Use documentation page as a home page (in package.json) ([00a9c85](https://github.com/azabroflovski/tiny-dialogue/commit/00a9c85))
+- **package:** Description like in docs ([e9b61b7](https://github.com/azabroflovski/tiny-dialogue/commit/e9b61b7))
+
+### 🎨 Styles
+
+- Reformat code via eslint ([e0ccb2e](https://github.com/azabroflovski/tiny-dialogue/commit/e0ccb2e))
+
+### ❤️ Contributors
+
+- azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.9
 
 [compare changes](https://github.com/azabroflovski/native-modal/compare/v0.0.8...v0.0.9)
