@@ -2,7 +2,7 @@
   "name": "tiny-dialogue",
   "private": false,
   "version": "0.0.9",
-  "description": "Dialogue - tiny wrapper over the <dialog />. No overhead scripts. Just dialog.",
+  "description": "Dialogue - tiny wrapper over the <dialog />. Native, no overhead scripts, just dialog",
   "type": "module",
   "author": "azabroflovski",
   "license": "MIT",
