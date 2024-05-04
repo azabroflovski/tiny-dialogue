@@ -32,13 +32,17 @@
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.2.10",
     "vitepress": "^1.1.4",
-    "vue": "^3.4.19"
+    "vue": "^3.4.19",
+    "@antfu/eslint-config": "^2.16.1",
+    "eslint": "^9.1.1"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.6.1"
