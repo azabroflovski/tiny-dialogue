@@ -1,14 +1,14 @@
 # Introduction
 
-These are the core concepts you need to know about `native-modal` and its approach to modals management.
+These are the core concepts you need to know about `tiny-dialogue` and its approach to modals management.
 
-## What is NativeModal ?
+## What is Dialogue ?
 
-NativeModal is a streamlined and efficient library designed to provide 
+Dialogue is a streamlined and efficient library designed to provide 
 a simple and direct wrapper around the native HTML [`<dialog>`]() element,
 providing an effortless way to implement modals without the need for bulky scripts or complex dependencies.
 
-In summary, `native-modal` is an elegant, performance-oriented solution for implementing modals in web applications.
+In summary, `tiny-dialogue` is an elegant, performance-oriented solution for implementing modals in web applications.
 Its combination of minimal overhead, native browser integration, speed, broad 
 compatibility, framework flexibility, and strong typing makes it an excellent 
 choice for developers.

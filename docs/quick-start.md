@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress';
 import { computed } from 'vue';
-import { initNativeModal } from '../src/lib';
+import { initSimpleMode } from '../src/lib';
 
-initNativeModal();
+initSimpleMode();
 
 const { isDark } = useData();
 const dialogAttrs = computed(() => {
@@ -27,13 +27,13 @@ The package is under **active development**, in this regard, there may be signif
 
 Package is available on npm and can be installed from the command line.
 ```shell
-$ npm i native-modal
+$ npm i tiny-dialogue
 ```
 ### via CDN
 You can also download or link to the latest compiled version using the CDN.
 
 ```shell
-https://unpkg.com/native-modal/dist/native-modal.min.js
+https://unpkg.com/tiny-dialogue/dist/tiny-dialogue.min.js
 ```
 
 ## Usage
@@ -41,9 +41,9 @@ https://unpkg.com/native-modal/dist/native-modal.min.js
 See simple usage with attribute based modals.
 
 ```typescript
-import { initNativeModal } from 'native-modal'
+import { initSimpleMode } from 'tiny-dialogue'
 
-initNativeModal() // register attrs handling
+initSimpleMode() // register attrs handling
 ```
 
 ```html
@@ -53,7 +53,7 @@ initNativeModal() // register attrs handling
 ... 
 
 <dialog>
-    <h2>NativeModal</h2>
+    <h2>Dialogue</h2>
     <p>Hello, click on OK to close modal.</p>
     <button data-modal-close>OK</button>
 </dialog>
@@ -64,7 +64,7 @@ initNativeModal() // register attrs handling
 <button class="VPButton medium brand" data-modal-open="dialog">Show modal</button>
 
 <dialog v-bind="dialogAttrs">
-    <h2>NativeModal</h2>
+    <h2>Dialogue</h2>
     <p>Hello, click on OK to close modal.</p>
     <button data-modal-close>OK</button>
 </dialog>
@@ -225,9 +225,9 @@ First, we need to define the modal structure of the DOM
 
 Next, we need to create a Modal instance: 
 ```typescript
-import { Modal } from 'native-modal'
+import { Dialogue } from 'tiny-dialogue'
 
-const modal = new Modal('#modal')
+const modal = new Dialogue('#modal')
 
 modal.open() // Yeah, you open me!
 modal.close() // easy to close!
@@ -236,9 +236,9 @@ modal.close() // easy to close!
 Okay, how do I apply the parameters? Let's look at an example:
 
 ```typescript
-import { Modal } from 'native-modal'
+import { Dialogue } from 'tiny-dialogue'
 
-const modal = new Modal('#modal', {
+const modal = new Dialogue('#modal', {
     animation: true, // enable open/close animation
     disableEsc: true, // prevent esc closing
 })

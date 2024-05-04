@@ -1,18 +1,18 @@
 {
-  "name": "native-modal",
+  "name": "tiny-dialogue",
   "private": false,
   "version": "0.0.9",
-  "description": "NativeModal - tiny wrapper over the <dialog />. No overhead scripts. Just modal.",
+  "description": "Dialogue - tiny wrapper over the <dialog />. No overhead scripts. Just dialog.",
   "type": "module",
   "author": "azabroflovski",
   "license": "MIT",
-  "homepage": "https://azabroflovski.github.io/native-modal/",
+  "homepage": "https://azabroflovski.github.io/tiny-dialogue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/azabroflovski/native-modal"
+    "url": "https://github.com/azabroflovski/tiny-dialogue"
   },
   "bugs": {
-    "url": "https://github.com/azabroflovski/native-modal/issues",
+    "url": "https://github.com/azabroflovski/tiny-dialogue/issues",
     "email": "hi@azabroflovski.uz"
   },
   "keywords": [
@@ -20,6 +20,9 @@
     "modals",
     "dialog",
     "dialogs",
+    "tiny dialogue",
+    "tiny",
+    "dialogue",
     "native-modal",
     "native-dialog",
     "native",

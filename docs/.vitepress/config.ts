@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/native-modal/',
-  title: 'NativeModal',
+  base: '/tiny-dialogue/',
+  title: 'Dialogue',
   description: 'Tiny wrapper over <dialog />',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -30,7 +30,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/azabroflovski/native-modal' },
+      { icon: 'github', link: 'https://github.com/azabroflovski/tiny-dialogue' },
     ],
   },
 })

@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "NativeModal"
+  name: "Dialogue"
   text: "Tiny wrapper over the &lt;dialog /&gt;"
-  tagline: No overhead scripts. Just modal.
+  tagline: Native, no overhead scripts, just dialog
   actions:
     - theme: brand
       text: Get started
@@ -15,7 +15,7 @@ hero:
       link: /demos
   image:
     src: /logo.png
-    alt: NativeModal
+    alt: Dialogue
 
 features:
   - title: 0.1 kb

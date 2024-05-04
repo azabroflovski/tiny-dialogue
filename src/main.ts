@@ -1,3 +1,1 @@
-import { initNativeModal } from './lib'
-
-initNativeModal()
+export * from './lib'
