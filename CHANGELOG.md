@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.0.12
+
+[compare changes](https://github.com/azabroflovski/tiny-dialogue/compare/v0.0.11...v0.0.12)
+
+### 📖 Documentation
+
+- **readme:** Pretty head & add logo ([a676d86](https://github.com/azabroflovski/tiny-dialogue/commit/a676d86))
+
+### 🏡 Chore
+
+- Add license file ([b8ad656](https://github.com/azabroflovski/tiny-dialogue/commit/b8ad656))
+- Add security.md file ([d57d472](https://github.com/azabroflovski/tiny-dialogue/commit/d57d472))
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.11
 
 [compare changes](https://github.com/azabroflovski/tiny-dialogue/compare/v0.0.10...v0.0.11)
