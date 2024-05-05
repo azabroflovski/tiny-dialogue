@@ -32,5 +32,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/azabroflovski/tiny-dialogue' },
     ],
+
+    footer: {
+      copyright: '© azabroflovski',
+    },
   },
 })
