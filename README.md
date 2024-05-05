@@ -1,10 +1,19 @@
-# Dialogue 
+<div align="center">
+  <img src="https://azabroflovski.github.io/tiny-dialogue/logo.webp" width="290">
+  <h3>Tiny wrapper over the &lt;dialog /&gt;</h3>   
+  <p>
+    Native, no overhead scripts, just dialog
+  </p>
+</div>
+
+# Dialogue
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/azabroflovski/tiny-dialogue)
 ![GitHub Release](https://img.shields.io/github/v/release/azabroflovski/tiny-dialogue?label=version)
 ![GitHub deployments](https://img.shields.io/github/deployments/azabroflovski/tiny-dialogue/github-pages)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/azabroflovski/tiny-dialogue/.github%2Fworkflows%2Fstatic.yml)
 ![NPM Downloads](https://img.shields.io/npm/dm/tiny-dialogue)
+
 
 ## Installation
 
