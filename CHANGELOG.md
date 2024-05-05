@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.0.11
+
+[compare changes](https://github.com/azabroflovski/tiny-dialogue/compare/v0.0.10...v0.0.11)
+
+### 📖 Documentation
+
+- **readme:** Add badges (via shields.io) ([5b39f41](https://github.com/azabroflovski/tiny-dialogue/commit/5b39f41))
+
+### 🏡 Chore
+
+- Remove unused typescript logo ([aef1690](https://github.com/azabroflovski/tiny-dialogue/commit/aef1690))
+- Convert and compress logo (png => webp) ([ff3aadb](https://github.com/azabroflovski/tiny-dialogue/commit/ff3aadb))
+
+### ❤️ Contributors
+
+- Azabroflovski <azabroflovski@gmail.com>
+
 ## v0.0.10
 
 [compare changes](https://github.com/azabroflovski/tiny-dialogue/compare/v0.0.9...v0.0.10)
