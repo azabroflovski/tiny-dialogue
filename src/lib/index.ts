@@ -1,1 +1,1 @@
-export * from './plain.ts'
+export * from './simple.ts'

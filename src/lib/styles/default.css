@@ -12,79 +12,104 @@ dialog:focus {
 
 dialog {
     /* variables */
-    --bg-color: #fff;
-    --color: #1e1e1e;
+    --dialog-background-color: #fff;
+    --dialog-text-color: #1e1e1e;
 
-    color: var(--color);
-    background-color: var(--bg-color);
+
+    color: var(--dialog-text-color);
+    background-color: var(--dialog-background-color);
     padding: 26px;
     min-width: 400px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05)
+}
+
+dialog[animation] {
+    --dialog-animation-open: slide-down;
+    --dialog-animation-close: slide-up;
+    --dialog-animation-duration: 300ms;
 }
 
 dialog::backdrop {
-    background-color: rgba(0 ,0, 0, .77);
+    background-color: rgba(0 ,0, 0, .66);
 }
 
-@keyframes openDialogAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes closeDialogAnimation {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes openDialogBackdropAnimation {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes closeDialogBackdropAnimation {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+dialog[blur]::backdrop {
+    backdrop-filter: blur(6px);
+    background-color: rgba(0 ,0, 0, .55);
 }
 
 dialog[open] {
-    animation: openDialogAnimation .3s ease;
-}
-
-dialog[open]::backdrop {
-    animation: openDialogBackdropAnimation .3s ease;
+    visibility: visible;
+    opacity: 1;
+    animation: var(--dialog-animation-open) var(--dialog-animation-duration) ease forwards;
 }
 
 dialog[close] {
-    animation: closeDialogAnimation .3s ease;
+    animation: var(--dialog-animation-close) var(--dialog-animation-duration) ease forwards;
+}
+
+dialog[open]::backdrop {
+    animation: fade-in var(--dialog-animation-duration) ease forwards;
 }
 
 dialog[close]::backdrop {
-    animation: closeDialogBackdropAnimation .3s ease;
+    animation: fade-out var(--dialog-animation-duration) ease forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-32px);
+    }
 }
 
 
+
+
+
 dialog[dark] {
-    --bg-color: #1a1a1a;
-    --color: rgba(255, 255, 255, .87);
+    --dialog-background-color: #1a1a1a;
+    --dialog-text-color: rgba(255, 255, 255, .87);
 }
 
 dialog button {

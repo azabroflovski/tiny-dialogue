@@ -1,22 +1,10 @@
-import { getDialogElement } from './helpers'
+import { Dialogue } from './dialogue.ts'
 import type { HTMLDialogueElement } from './types.ts'
 
 export function initSimpleMode() {
   // SSR FRIENDLY
   if (typeof document === 'undefined' || typeof window === 'undefined')
     return
-
-  function openDialog(dialog: HTMLDialogueElement) {
-    if (dialog.hasAttribute('once')) {
-      if (!dialog.isOpen) {
-        dialog.showModal()
-        dialog.isOpen = true
-      }
-    }
-    else {
-      dialog.showModal()
-    }
-  }
 
   document.addEventListener('click', (event) => {
     // The event.target property references the element that was clicked.
@@ -25,37 +13,19 @@ export function initSimpleMode() {
 
     // Use the closest method to find the nearest ancestor of the clicked element
     // (including the clicked element itself) that has the 'data-modal-open' attribute.
-    const openDialogElement = target.closest('[data-modal-open]')
+    const openDialogElement = target.closest('[data-dialog-open]')
 
     // If an element with 'data-modal-open' was found...
     if (openDialogElement) {
       // Retrieve the value of the 'data-modal-open' attribute, which should correspond
       // to the selector of the dialog to be opened.
-      const targetDialogSelector = openDialogElement?.getAttribute('data-modal-open')
+      const targetDialogSelector = openDialogElement?.getAttribute('data-dialog-open')
 
       // If the selector is not empty, use it to find and open the dialog.
       if (targetDialogSelector) {
-        const dialog = getDialogElement(targetDialogSelector)
+        const dialog = new Dialogue(targetDialogSelector)
 
-        if (dialog.hasAttribute('once')) {
-
-        }
-
-        if (dialog.hasAttribute('show-delay')) {
-          setTimeout(() => {
-            openDialog(dialog)
-          }, +dialog.getAttribute('show-delay')!)
-        }
-        else {
-          openDialog(dialog)
-        }
-
-        if (dialog.hasAttribute('disable-esc')) {
-          dialog.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape')
-              event.preventDefault() // Prevent the default action of closing the dialog
-          })
-        }
+        dialog.open()
       }
 
       return
@@ -63,15 +33,15 @@ export function initSimpleMode() {
 
     // Similar to the previous block, but for closing dialogs.
     // It finds the nearest ancestor element with the 'data-modal-close' attribute.
-    const closeDialogElement = target.closest('[data-modal-close]')
+    const closeDialogElement = target.closest('[data-dialog-close]')
     if (closeDialogElement) {
       // Retrieve the value of the 'data-modal-close' attribute, which should correspond
       // to the selector of the dialog to be closed.
-      const targetDialogSelector = closeDialogElement?.getAttribute('data-modal-close')
+      const targetDialogSelector = closeDialogElement?.getAttribute('data-dialog-close')
 
       // If the selector is provided, use it to find and close the dialog.
       if (targetDialogSelector) {
-        getDialogElement(targetDialogSelector).close()
+        // getDialogElement(targetDialogSelector).close()
       }
       else {
         // If no specific dialog selector is provided,
@@ -81,18 +51,8 @@ export function initSimpleMode() {
         if (!targetDialog)
           return
 
-        if (targetDialog.hasAttribute('animation')) {
-          targetDialog.setAttribute('close', '')
-          targetDialog.addEventListener('animationend', () => {
-            if (targetDialog.hasAttribute('close')) {
-              targetDialog.removeAttribute('close')
-              targetDialog.close()
-            }
-          })
-        }
-        else {
-          targetDialog.close()
-        }
+        const dialog = new Dialogue(targetDialog as HTMLDialogueElement)
+        // dialog.close()
       }
     }
   })

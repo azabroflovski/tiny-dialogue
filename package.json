@@ -40,12 +40,13 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.16.1",
+    "eslint": "^9.1.1",
     "typescript": "^5.2.2",
+    "unocss": "^0.59.4",
     "vite": "^5.2.10",
     "vitepress": "^1.1.4",
-    "vue": "^3.4.19",
-    "@antfu/eslint-config": "^2.16.1",
-    "eslint": "^9.1.1"
+    "vue": "^3.4.19"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.6.1"

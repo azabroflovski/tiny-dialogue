@@ -7,85 +7,19 @@
   <title>Vite + TS</title>
 </head>
 <body>
-<div id="app">
-  <h1>Page title</h1>
-  <button data-modal-open="#dialog">Open modal</button>
-  <button data-modal-open="#dialog-dark">Open modal (dark)</button>
-  <button id="btn">Programmatic</button>
-  <button data-modal-open="#dialog-onetime">One time</button>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, unde.</p>
 
-  <dialog id="dialog" blur animation>
-    <div data-dialog-header>
-      <h2>Hello</h2>
-
-      <svg data-modal-close xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </div>
-
-    <div data-dialog-content>
-      I am a native <code>dialog</code> component
-    </div>
-
-    <div data-dialog-footer>
-      <button data-modal-close>Yes</button>
-      <button data-modal-close>Cancel</button>
-    </div>
-  </dialog>
-
-  <dialog id="dialog-dark" blur dark animation>
-    <div data-dialog-header>
-      <h2>Hello</h2>
-    </div>
-
-    <div data-dialog-content>
-      I am a native <code>dialog</code> component
-    </div>
-
-    <div data-dialog-footer>
-      <button data-modal-close>Yes</button>
-      <button data-modal-close>Cancel</button>
-    </div>
-  </dialog>
-
-    <dialog id="dialog-onetime" blur animation once>
-        <div data-dialog-header>
-            <h2>Onetime</h2>
-        </div>
-
-        <div data-dialog-content>
-            I am a onetime <code>dialog</code>
-        </div>
-
-        <div data-dialog-footer>
-            <button data-modal-close>Good!</button>
-        </div>
-    </dialog>
+<div class="container mx-auto">
+    <button data-dialog-open="#cool">Open</button>
 </div>
+
+<dialog id="cool" animation blur>
+    <p>Bla bla</p>
+    <p>Bla bla</p>
+    <p>Bla bla</p>
+</dialog>
+
+<p>asd</p>
+
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
