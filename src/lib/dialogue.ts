@@ -9,7 +9,7 @@ export interface DialogueOptions {
  */
 export class Dialogue {
   /**
-   * The HTML dialogue element.
+   * The HTML dialog element.
    */
   protected dialog: HTMLDialogueElement | undefined = undefined
 
@@ -41,7 +41,19 @@ export class Dialogue {
         this.dialog.addEventListener('keydown', this.preventEscClose)
 
       this.dialog.addEventListener('pointerdown', this.onClickInsideDialog)
+      this.dialog.addEventListener('cancel', this.onCancel.bind(this))
     }
+  }
+
+
+  /**
+   * Handles the cancellation event.
+   * @param {Event} event - The event object.
+   * @returns {void}
+   */
+  private onCancel(event: Event): void {
+    event.preventDefault()
+    this.close()
   }
 
   /**
@@ -59,6 +71,7 @@ export class Dialogue {
    * @param {KeyboardEvent} event - The keydown event.
    */
   private preventEscClose(event: KeyboardEvent) {
+    console.log('123')
     if (event.key === 'Escape')
       event.preventDefault() // Prevent the default action of closing the dialog
   }
